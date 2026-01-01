@@ -1,0 +1,101 @@
+---
+
+## VERİ BİLİMİ ÇALIŞMA PROMPTU (Jupyter Notebook için)
+
+### Rolün
+
+Sen bir veri bilimcisin. Python kullanarak veri bilimine giriş seviyesinde, akademik, tutarlı ve anlaşılır bir Jupyter Notebook hazırlayacaksın.
+
+### Amaç
+
+Seçilen çok tablolu e-ticaret veri seti üzerinde veri biliminin temel adımlarını eksiksiz uygulamak ve lojistik süreçler üzerinden makine öğrenmesi kullanarak anlamlı bir sonuç üretmek.
+
+### Kullanılan Veri Seti
+
+**Christmas Retail Sales – Shipping & Delivery Dataset (Kaggle)**
+Sipariş, ürün, kampanya, sevkiyat, teslimat, iade ve takvim boyutlarını kapsayan; Black Friday, Cyber Monday ve Noel dönemlerine ait gerçekçi perakende verisi.
+
+---
+
+## İzlenecek Adımlar
+
+### 1. Veri Tanıma
+
+* Veri setinin genel amacı
+* Kullanılan tabloların listesi
+  (OrderHeader, OrderLine, Product, Promotion, Fulfillment, Returns, Calendar)
+* Her tablonun iş sürecindeki rolünün açıklanması
+* Satır ve sütun sayılarının belirtilmesi
+
+---
+
+### 2. Veri Ön İşleme
+
+* Veri tiplerinin kontrolü
+* Tarih alanlarının `datetime` formatına dönüştürülmesi
+* Analiz ve modelleme için gereksiz kimlik sütunlarının çıkarılması
+* Eksik, tutarsız veya hatalı verilerin incelenmesi
+* Gerekli tablolar arasında birleştirme (merge) işlemlerinin yapılması
+
+---
+
+### 3. Özellik Mühendisliği (Feature Engineering)
+
+* Taşıma süresi (DeliveryDate – ShipDate)
+* Taahhüt edilen süre (PromisedDate – ShipDate)
+* Gecikme gün sayısı
+* Tarihlerden ay, hafta ve tatil bilgisi çıkarılması
+* Gerekli kategorik değişkenlerin modele uygun hâle getirilmesi
+
+---
+
+### 4. Keşifsel Veri Analizi (EDA)
+
+* Teslimat durumlarının dağılımı (Late / OnTime)
+* Kargo firmalarına göre gecikme oranları
+* Hizmet seviyelerine göre teslimat performansı
+* Zaman ve sezon etkilerinin incelenmesi
+* Uygun görselleştirmeler (bar chart, boxplot vb.)
+
+---
+
+### 5. Makine Öğrenmesi
+
+* Problem türü: **İkili sınıflandırma**
+* Hedef değişken: **DeliveryStatus**
+* Kategorik değişkenlerin sayısallaştırılması
+* Eğitim ve test veri setlerinin oluşturulması
+* Logistic Regression veya Decision Tree modeli kurulması
+
+---
+
+### 6. Model Değerlendirme
+
+* Accuracy metriğinin hesaplanması
+* Confusion Matrix oluşturulması
+* Model performansının yorumlanması
+
+---
+
+### 7. Sonuç ve Yorum
+
+* Modelin genel başarısının değerlendirilmesi
+* Teslimat gecikmesini etkileyen temel faktörlerin yorumlanması
+* Veri setinin güçlü ve sınırlı yönlerinin belirtilmesi
+
+---
+
+### Dil ve Üslup
+
+* Akademik
+* Açık ve sade
+* Her adımda kod ve kısa açıklama birlikte sunulmalıdır
+
+---
+
+### Çıktı
+
+Hocaya teslim edilebilecek, baştan sona açıklamalı ve adım adım ilerleyen bir Jupyter Notebook ve Anlatımda yardımcı olabilecek detayları yorum satırları ile güzelce hazırlanmış sunum yaparken zorlanmamamız adına her şey detaylı açıklanmış olmalı ve saçma sapan hatalar yapılmamalı:)
+
+
+---
